@@ -24,11 +24,30 @@ type # => Can be 'Services', 'Goods', 'Leisure' and 'Bitcoin'
 category # => The category that this item belongs to (e.g: 'Electronics', 'Hosting services')
 ```
 
-You can choose the better way to download this database: XML, JSON or SQL insertion script (MySQL and Potgresql supported).
+You can choose the better way to download this database: XML, JSON or SQL insertion script (MySQL and Potgresql supported). We don't know how much links we have, but is probably something above 1.700 links. Well, I think you already know the basics, let's advance. If you want something more, feel free to [create a new issue](https://github.com/paladini/parse-usebitcoins/issues) with your tip / question. 
 
 Directly download the database:
 ---------------
 Currently we have the data in 
+
+Download the tool and get the latest data:
+---------------
+If you want download the most recent data, you need to run Parse Usebitcoins in your computer - but it's simple! If you're here, you probably have Ruby on Rails installed in your machine, but if not, [click here](http://rubyonrails.org/download). 
+
+**1º Step ->** You must download our entire project. [Click here to download](https://github.com/paladini/parse-usebitcoins/archive/master.zip).
+
+**2º Step ->** Extract the project in a folder that you will remember. Now open your Terminal / Console and navigate to the folder where you extracted the Parse Usebitcoins. We need setup some things, but it's quickly. Run these commands on your Terminal:
+```ruby
+bundle install
+bundle exec rake db:migrate
+```
+
+**3º Step ->** Now we can start parsing and crawling some data, let's start the process of getting the most recent data from Usebitcoins.info. Just type the following in your Terminal:
+```ruby 
+rake data:parse
+```
+
+**4º Step ->** Finally, just make a coffee and wait. The parsing process may take a long, when it finish you'll can see the generated files in `public/parse_bitcoins`, inside the Parse Usebitcoins folder.
 
 Why we do that?
 ---------------
