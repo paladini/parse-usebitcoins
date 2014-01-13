@@ -28,7 +28,7 @@ You can choose the better way to download this database: XML, JSON or SQL insert
 
 Directly download the database:
 ---------------
-Currently we have the data in 
+TODO
 
 Download the tool and get the latest data:
 ---------------
@@ -57,4 +57,4 @@ If you agree with us, you must know [BTC-Stores](http://www.btc-stores.com). **T
 
 About and License
 ---------------
-This little tool was created by Fernando Paladini, a brazilian student and the main-developer of [BTC-Stores](http://www.btc-stores.com), the first open-source Bitcoin directory in the world. This project is distributed under GPL v2 License. 
+This little tool was created by [Fernando Paladini](http://fpaladini.blogspot.com), a brazilian student and the main-developer of [BTC-Stores](http://www.btc-stores.com), the first open-source Bitcoin directory in the world. This project is distributed under GPL v2 License. 
