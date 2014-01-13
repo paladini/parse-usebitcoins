@@ -63,14 +63,22 @@ namespace :data do
     end
 
   	links_length = links.size
+    
+    # Print the first percentage
     percent = 0
+    puts "\n"
+    puts "----------------------------------"
+    puts "          Loading..." + percent.to_s + "%"
+    puts "----------------------------------"
+
   	links.each_with_index do |url, index|
-  		
+
   		# Get the currently percentage (without repeating the same percentage in Terminal)
   		percent_new = index * 100 / links_length
-      if percent == percent_new && percent != 0
+      if percent == percent_new
 
       else
+        puts "\n"
         puts "----------------------------------"
         puts "          Loading..." + percent.to_s + "%"
         puts "----------------------------------"
@@ -116,7 +124,7 @@ namespace :data do
   	category = doc.xpath("//ul[@class='breadcrumbnomarginbottom nopaddingbottom']/li[3]/span")
   	category = category.first.text
 
-    puts "\n\n\n"
+    puts "\n"
     puts "Parsing '" + category.to_s + "':"
 
     # While have a next page in this category
@@ -219,8 +227,8 @@ namespace :data do
   # Function to discover if this category have a have next page
   def get_next_page(doc)
   	
-    doc = nil
     have_next_page = doc.xpath("//li[@class='pagination-next']/a")
+    doc = nil
 
     # If have a next page, get the page and returns the HTML "doc"
   	if !have_next_page.empty?
