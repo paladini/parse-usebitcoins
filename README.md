@@ -49,6 +49,8 @@ rake data:parse
 
 **4º Step ->** Finally, just make a coffee and wait. The parsing process may take a long, when it finish you'll can see the generated files in `public/parse_bitcoins`, inside the Parse Usebitcoins folder.
 
+If you have any questions, [let us know](https://github.com/paladini/parse-usebitcoins/issues/new).
+
 Why we do that?
 ---------------
 We believe in the power of Bitcoin and we really trust it can change the world. Anyone who defends Bitcoin is in favor to a decentralized economy and power. Of course, the anonymity is very important factor too. We don't believe just that, we believe that the knowledge must be free, must be accessible to everyone - and finally make a truly Bitcoin revolution. Bitcoin is free, is open-source, collaborative. We agree with that, and this is our reasons. 
