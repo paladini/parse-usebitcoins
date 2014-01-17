@@ -124,6 +124,12 @@ namespace :data do
   	category = doc.xpath("//ul[@class='breadcrumbnomarginbottom nopaddingbottom']/li[3]/span")
   	category = category.first.text
 
+    # This category have subcategories
+    if category.empty?
+      category = doc.xpath("//ul[@class='breadcrumbnomarginbottom nopaddingbottom']/li[3]/a")
+      category = category.first.text
+    end
+
     puts "\n"
     puts "Parsing '" + category.to_s + "':"
 
@@ -158,7 +164,7 @@ namespace :data do
 	  		# Creating a new Item
 	  		item = Item.new(
 		      :name => this_store_title, 
-		      :description => this_store_description,
+		      :description => simple_format h(this_store_description.to_s.squish),
 		      :url => this_store_link,
           :image_url => this_store_image.to_s,
 		      :type => type.to_s,
@@ -263,9 +269,7 @@ namespace :data do
       file = File.open("public/parse_usebitcoins/data-postgresql.sql", "w")
 
       @all_stores.each do |store|
-        file.write("INSERT INTO stores(name, description, url, image_url, type, category) VALUES
-                    ('#{store.name.to_s}', '#{store.description.to_s}', '#{store.url.to_s}', 
-                     '#{store.image_url.to_s}', '#{store.type.to_s}', '#{store.category.to_s}');")
+        file.write("INSERT INTO stores(name, description, url, image_url, type, category) VALUES ('#{store.name.to_s}', '#{store.description.to_s}', '#{store.url.to_s}', '#{store.image_url.to_s}', '#{store.type.to_s}', '#{store.category.to_s}');")
       end
     rescue IOError => e
       puts "Some error occoured when trying to save PostgreSQL script."
@@ -281,9 +285,7 @@ namespace :data do
       file = File.open("public/parse_usebitcoins/data-mysql.sql", "w")
 
       @all_stores.each do |store|
-        file.write("INSERT INTO stores(name, description, url, image_url, type, category) VALUES
-                    ('#{store.name.to_s}', '#{store.description.to_s}', '#{store.url.to_s}', 
-                     '#{store.image_url.to_s}', '#{store.type.to_s}', '#{store.category.to_s}');")
+        file.write("INSERT INTO stores(name, description, url, image_url, type, category) VALUES ('#{store.name.to_s}', '#{store.description.to_s}', '#{store.url.to_s}', '#{store.image_url.to_s}', '#{store.type.to_s}', '#{store.category.to_s}');")
       end
     rescue IOError => e
       puts "Some error occoured when trying to save PostgreSQL script."
