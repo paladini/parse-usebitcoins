@@ -32,8 +32,8 @@ If you want directly import the database to your website / software / service, y
 
 ###Downloads:###
 
-* [MySQL Script](https://github.com/paladini/parse-usebitcoins/raw/master/public/parse_usebitcoins/data-mysql.sql)
-* [Postgresql Script](https://github.com/paladini/parse-usebitcoins/raw/master/public/parse_usebitcoins/data-postgresql.sql)
+* [MySQL Script](#) - Temporarily down.
+* [Postgresql Script](#) - Temporarily down.
 * [JSON](https://github.com/paladini/parse-usebitcoins/raw/master/public/parse_usebitcoins/data.json)
 * [XML](https://github.com/paladini/parse-usebitcoins/raw/master/public/parse_usebitcoins/data.xml)
 
