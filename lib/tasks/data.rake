@@ -101,6 +101,8 @@ namespace :data do
   	require 'rubygems'
   	require 'nokogiri'
     require 'open-uri'
+    include ERB::Util
+    include ActionView::Helpers::TextHelper
 
   	# Global variables
   	# -----------------------------------
@@ -164,7 +166,7 @@ namespace :data do
 	  		# Creating a new Item
 	  		item = Item.new(
 		      :name => this_store_title, 
-		      :description => simple_format h(this_store_description.to_s.squish),
+		      :description => this_store_description.to_s.squish.html_safe,
 		      :url => this_store_link,
           :image_url => this_store_image.to_s,
 		      :type => type.to_s,
