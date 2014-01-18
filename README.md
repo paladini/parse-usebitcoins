@@ -28,7 +28,16 @@ You can choose the better way to download this database: XML, JSON or SQL insert
 
 Directly download the database:
 ---------------
-TODO
+If you want directly import the database to your website / software / service, you're on the rigth place. 
+
+###Downloads:###
+
+* [MySQL Script](https://github.com/paladini/parse-usebitcoins/raw/master/public/parse_usebitcoins/data-mysql.sql)
+* [Postgresql Script](https://github.com/paladini/parse-usebitcoins/raw/master/public/parse_usebitcoins/data-postgresql.sql)
+* [JSON](https://github.com/paladini/parse-usebitcoins/raw/master/public/parse_usebitcoins/data.json)
+* [XML](https://github.com/paladini/parse-usebitcoins/raw/master/public/parse_usebitcoins/data.xml)
+
+After download your desired database, just import it to your project. Don't know do that? [MySQL Script](http://dev.mysql.com/doc/refman/5.0/en/mysql-batch-commands.html), [Postgresql Script](http://stackoverflow.com/questions/9736085/run-a-postgresql-sql-file-using-command-line-args). XML and Json isn't language agnostic, so you must find a tutorial for your project language.  
 
 Download the tool and get the latest data:
 ---------------
